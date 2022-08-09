@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import {useEffect, useState} from "react"
 import {useParams
 } from "react-router-dom";
 function App() {
@@ -29,8 +30,13 @@ function App() {
       // axios.get("http://localhost:3000").then(res=>{
       //   console.log(res.headers);
       // })
+       
       
     },[])
+    const redirect =url=>{
+      console.log(url);
+      window.location.replace(url);
+  }
   return (
     <div className="App">
       <header className="App-header">
