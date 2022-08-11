@@ -19,12 +19,13 @@ function App() {
     //   }
     //const params = new URLSearchParams(window.location.pathname);
     //console.log(params.token)
-    alert("here"+id)
+   // alert("here"+id)
     if(typeof(id)!='undefined' && id!=null && id!=""){
       //alert("id"+id);
+      document.cookie=id;
       setToken(id);
     }else{
-      alert("here");
+      //alert("here");
       redirect("https://login-three-gamma.vercel.app/cookie/client4.vercel.app");
     }
       // axios.get("http://localhost:3000").then(res=>{
